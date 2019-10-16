@@ -1,0 +1,229 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.2, 1 February 2017) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%%
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=0.85cm,bottom=1.25cm}
+
+% Change the font if you want to.
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% If using xelatex or lualatex:
+\setmainfont{Lato}
+
+% If using pdflatex:
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage[default]{lato}
+
+
+% Change the colours if you want to
+% \definecolor{LightBlue}{HTML}{0099FF}
+% \definecolor{SlateGrey}{HTML}{2E2E2E}
+% \definecolor{LightGrey}{HTML}{666666}
+% \colorlet{heading}{LightBlue}
+% \colorlet{accent}{Red}
+% \colorlet{emphasis}{SlateGrey}
+% \colorlet{body}{LightGrey}
+
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+% \renewcommand{\itemmarker}{{\small\textbullet}}
+% \renewcommand{\itemmarker}{{\small\faCheckSquareO}}
+\renewcommand{\itemmarker}{{\small\faCheckSquare}}
+
+
+\renewcommand{\ratingmarker}{\faCircle}
+% \renewcommand{\ratingmarker}{\faCheckSquareO}
+
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\newcommand*\skiplength{0.310\textwidth}
+\newcommand\asidelist[2]{%
+  \noindent
+  \begin{tabular}{@{}p{\skiplength}@{}p{\skiplength}@{}}
+   \raggedright #1 & \raggedleft #2
+  \end{tabular}
+}
+
+%% 全局的字体大小
+% \usepackage{scrextend}
+% \changefontsizes{9pt}
+
+%% 防止出现 Undefined control sequence. l.2 \par
+%% unknownkeysallowed
+\usepackage{comment}
+\usepackage{chinese}
+
+\begin{document}
+\name{方莲}
+\tagline{金融交易系统开发工程师}
+% \photo{2.8cm}{myportrait}
+\photo{2.8cm}{william}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{william.lian.fang@gmail.com}
+  \phone{(+86) 181 5088 0332}
+  % \mailaddress{深圳·福田}
+  \location{深圳·福田}
+  \homepage{www.williamlfang.github.io}
+  % \facebook{@hduong.85}
+  % \linkedin{linkedin.com/in/huy-duong}
+  \github{https://github.com/williamlfang}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+%-------------------------------------------------------------------------------
+%               EDUCATION
+%-------------------------------------------------------------------------------
+% \cvsection[myresume-sidebar]{Education}
+% \cvevent{硕士. 厦门大学·王亚南经济研究员}{2010 - 2013}{中国·厦门}
+% {
+%   数量经济学
+% }
+% \cvevent{学士. 山东大学}{2006 - 2010}{中国·济南}
+% {
+%     经济管理专业
+% }
+
+%-------------------------------------------------------------------------------
+%               EXPERIENCE
+%-------------------------------------------------------------------------------
+\cvsection[myresume-sidebar]{\textbf{工作经历}}
+\cvevent{\textbf{技术总监}}{汉云投资管理有限公司}{2016.09 ~ 至今}{深圳}
+
+\textbf{负责设计全公司的技术框架，从零开始搭建自动化金融交易系统}
+\vspace{0.15cm}
+
+\begin{itemize}
+    \item 实现基于上期技术CTP的期货程序化交易系统
+    \item 实现基于XTP、华鑫·Tora、宽睿平台的股票程序化交易系统
+    \item 底层代码封装\cvtagsmall{c++}、顶层引擎调用\cvtagsmall{python}，并配置\cvtagsmall{Qt-GUI}界面，兼顾了程序码执行性能与程序员开发效能
+    \item 获取交易所推送的Tick级别数据，并编写脚本语言进行清洗，实现本地数据库的的自动运维
+    \item 集成操作系统运维、数据库更新、策略算法分析、交易下单执行、风控监控模块与综合研究分析的一体化多功能平台
+    \item 公司目前管理CTA规模10亿，自营资金5000万，日内非高频交易
+\end{itemize}
+
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+\vspace{0.10cm}
+\wheelchart{1.60cm}{0.6cm}{%
+  5/6em/accent!50/\footnotesize{服务器运维},
+  40/9em/accent/\footnotesize{交易系统开发},
+  10/9em/accent!40/\footnotesize{实现交易策略},
+  20/15em/accent!30/\footnotesize{数据清理与管理},
+  15/8em/accent!20/\footnotesize{团队管理},
+  10/8em/accent!10/\footnotesize{学习新技能}
+}
+
+\divider
+
+\cvevent{\textbf{行业研究员}}{国信证券·福建分公司}{2013.09 ~ 2016.08}{厦门}
+
+\textbf{担任金融投资顾问，建立金融模型，并基于量化指标推荐交易信号}
+\vspace{0.15cm}
+\begin{itemize}
+    \item 应用金融模型，对行业与公司基本面进行数据分析与价值挖掘
+    \item 深度分析行业发展与热点板块，推荐相关的优秀股票标的
+    \item 负责开发、运行分公司港股通股票标的投资荐股类产品
+\end{itemize}
+
+
+\vspace{0.10cm}
+\cvsection{\textbf{社会工作}}
+
+% \cvevent{实习生}{乾方金融·股权投资基金管理有限公司}{2013.06 ~ 2013.09}{厦门}
+% \textbf{新三板拟挂牌企业、A股IPO上市公司、定增项目}
+% \vspace{0.15cm}
+% \begin{itemize}
+%     \item 负责进行项目的政策与市场行业的研究与分析
+%     \item 考察评估投资项目，撰写投资分析报告、投资方案、新三板基金投资指南
+%     \item 实施投资方案，完成投资计划及目标，跟踪项目后续发展
+% \end{itemize}
+
+\cvevent{\textbf{合伙创业}}{厦门「{\kai 咪豆$^+$}」客栈}{2012.10 ~ 2014.06}{厦门}
+\vspace{0.10cm}
+\begin{itemize}
+    % \item 前期工作准备充足（个人经历，好友讨论可行性，问卷调查，访谈）
+    \item 根据目标市场定位分析，精心设计与广泛传播清新、亲民的客栈文化，突出客栈独特性
+    \item 利用口碑营销与互联网媒体宣传，增进客户的认同感与粘合度
+\end{itemize}
+
+\divider
+
+% \vspace{0.20cm}
+\cvevent{\textbf{研究生助教}}{厦门大学·王亚南经济研究院}{2011.09 ~ 2012.07}{厦门}
+\vspace{0.10cm}
+\begin{itemize}
+    \item 辅助任课老师，编写课件及展示程序代码（使用\LaTeX{}与\cvtagsmall{Matlab}）
+    \item 依据课程内容与进度，需及时制作课程笔记（独立完成英文版本）
+\end{itemize}
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+\end{document}
